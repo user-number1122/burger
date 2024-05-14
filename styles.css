@@ -1,0 +1,230 @@
+@charset "UTF-8"; 
+
+@font-face { 
+    font-family: "TT Lakes";                        
+    font-style: normal;                              
+    font-weight: 500;                             
+    font-display: swap;                             
+    src: url(./fonts/TTLakes-Medium.woff) format("woff"),
+    url(./fonts/TTLakes-Medium.woff2) format("woff2"); 
+}
+@font-face {
+    font-family: "TT Lakes"; 
+    font-style: normal; 
+    font-weight: 700;                              
+    font-display: swap;
+    src: url(./fonts/TTLakes-Condensed-Bold.woff) format("woff"), 
+    url(./fonts/TTLakes-Condensed-Bold.woff2) format("woff2"), ; 
+}
+@font-face {
+    font-family: "TT Lakes"; 
+    font-style: normal; 
+    font-weight: 400;                            
+    font-display: swap;
+    src: url(./fonts/TTLakes-Regular.woff) format("woff"), 
+    url(./fonts/TTLakes-Regular.woff2) format("woff2"), ; 
+}
+
+*   {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+
+.burger_icon-search {
+    background: url(./img/search_burger.svg) center;
+    background-color: #FF3E79;
+}
+
+.burger_icon-close {
+    background: url(./img/close_burger.svg) no-repeat center;
+    background-color: #FF3E79;
+}
+
+.phone_icon {
+    background: url(./img/call.svg) no-repeat center;
+    background-color: #FF3E79;
+}
+
+.profile_icon {
+    background: url(./img/profile.svg) no-repeat center;   
+    background-color: #FF3E79;  
+}
+
+.message_icon {
+    background: url(./img/chat.svg) no-repeat center;
+    background-color: #FF3E79;
+}
+
+.nav__btn {
+    cursor: pointer;                                      
+    width: 40px;                                            
+    height: 40px;                                          
+    border-radius: 50%;                                     
+}                                 
+  .nav__btn:hover {                                         
+    border: 2px solid #ffffff;                                    
+}
+
+.burger{
+    height: 100%;                                           /*устанавливает высоту меню равной 100% от высоты окна браузера.*/
+    font-family: "TT Lakes", sans-serif;                   
+    font-style: normal;                                     
+    background: #ffffff;                                
+    width: 320px;                                           /*устанавливает ширину меню равной 320 пикселей. если бы 100% то на всю ширину*/
+    position: fixed;
+    top: 0;                                                 /*располагает меню в верхней части экрана.*/
+    overflow-y: auto;                                       /*Добавляем вертикальный скролл, если контент превышает высоту */                       
+    box-shadow: 13px 0px 60px rgba(107, 107, 141, 0.5);   /*добавляет тень к элементу*/ 
+}
+@media screen and (min-height: 784px) {                     /*burger__footer, который имеет margin-top: auto;, начинает отодвигаться от .burger__menu*/
+    .burger {
+        display: flex;
+        flex-direction: column; } 
+}
+
+.burger__header{
+    display: flex;                                         
+    justify-content: space-between;                         
+    align-items: center;                                   
+    margin: 18px 24px 46.27px 24px;                         
+    width: auto;                                            
+}
+
+.burger__header_left{ 
+    display: flex;                                         
+    justify-content: space-between;                        
+    align-items: center;                                   
+}      
+
+.burger__logo{
+    width: 97px ;
+    height: 51px;
+    margin-left: 16.73px;                                   
+}
+
+.burger__header_right{
+    display: flex;                                          
+    justify-content: center; 
+}
+
+.burger__menu{
+    margin-left: 24px;                                    
+    width: 200px;
+}
+
+.burger__menu_list{
+    display: flex;                                         
+    flex-direction: column;                                 /*Направление, в котором блоки будут располагаться в виде столбца */
+}
+  
+.burger__menu_item {
+    font-size: 16px;                                        
+    line-height: 24px;                                      /*устанавливает величину пространства между строками*/
+    margin-bottom: 32px;                                    /*устанавливает внешний отступ внизу элемента.*/
+    letter-spacing: -0.2px;                                 /*Свойство letter-spacing определяет межбуквенное расстояние в тексте.*/
+    font-weight: 500;                                      
+    list-style-type:  none;                                 /*убрать маркеры у списка*/
+    cursor: pointer;          
+}                        
+
+.burger__menu_item--active {                                /*Стили для родительского элемента*/
+    color: #7E7E82;      
+    position: relative;                                     /*точка отсчета для позиционирования его потомков с абсолютным позиционированием.*/                  
+}
+.burger__menu_item--active:before {                         /*создание декоративной вертикальной полосы слева от активного элемента меню.*/        
+    content:"";                                             /*пустое место, для добавления декоративных элементов или линий, не внося изменений в фактическое содержимое страницы.*/
+    width: 4px ;                                            /*ширина линии по макету*/
+    height: 32px ;                                          /*высота*/
+    background: #41F6D7;                                  
+    position: absolute;                                     /*потомок родителя .burger__menu_item--active*/      
+    left: -24px;                                            /*элемент будет расположена в родительском элементев том месте, которое вы определите через свойства left, top, right, bottom.*/
+    bottom: -4px;                                           /*элемент будет расположена в родительском элементев том месте, которое вы определите через свойства left, top, right, bottom.*/
+    border-top-right-radius: 6px ;                          /*устанавливает радиус скругления правого нижнего уголка рамки.*/  
+    border-bottom-right-radius: 6px ;                       /*устанавливает радиус скругления правого верхнего уголка рамки.*/  /*то же что и border-radius: 0 6px 6px 0;*/
+}
+
+.burger__menu_item--active .burger__menu_link {             /*Селектор потомков. Применяет серый цвет к тексту в ссылке */
+    color: #7E7E82;
+}
+
+.burger__menu_link {
+    color: #1B1C21;                                       /*цвет текста ссылки*/
+    text-decoration: none; }                                /*убрано нижнее подчеркивание у ссылки*/
+
+.burger__footer {
+    width: auto;                                            /*по умолчанию*/
+    margin-top: auto;                                       /*Определяет внешний отступ в верхней части элемента. auto - Браузер выбирает подходящее значение для использования.*/
+    margin-left: 24px;                                      /*внешний отсуп слева*/
+}
+
+.burger__footer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;                                   
+    margin-left: 24px; }
+    
+.burger__footer-nav {
+    display: flex;                                         
+    justify-content: flex-start;                            /*Выравнивание флекс-элементов с начала */
+    margin-bottom: 16px;                                    /*устанавливает внешний отступ внизу элемента.*/
+}
+
+.phone_icon {
+    margin-right: 16px;                                     /*устанавливает внешний отступ справа от элемента.*/   
+}
+.message_icon {
+    margin-right: 16px;                                     /*устанавливает внешний отступ справа от элемента.*/   
+}
+.profile_icon {
+    margin-right: 16px;                                     /*устанавливает внешний отступ справа от элемента.*/   
+}
+
+.burger__footer-contacts{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__email{
+    text-decoration: none;                                  
+    line-height: 24px;                                      
+    margin-bottom: 12px;                                   
+    letter-spacing: -0.2px;                                 /*Свойство letter-spacing определяет межбуквенное расстояние в тексте.*/
+    color: #1B1C21;                                       /*цвет шрифта по макету*/
+    font-weight: 500;      
+}
+.footer__phone-number{
+    text-decoration: none;                                  
+    line-height: 32px;                                      
+    margin-bottom: 40px;                                    
+    font-size: 24px;                                        /*размер шрифта по макету*/
+    font-weight: 700;                     
+    color: #1B1C21;                                      
+    letter-spacing: -0.6px;                                 
+}
+
+.burger__footer-languages {
+    display: flex;                                          
+    justify-content: flex-start;                           
+    line-height: 24px;                                     
+    color: #1B1C21;                                      
+}
+
+.language-item{
+    font-size: 16px;                                       
+    font-weight: 500;      
+    margin-right: 7px;                                       
+    cursor: pointer;                                          
+}
+.language-item--active{
+    color: #7E7E82;
+}
+ /* Сделать ширину полосы прокрутки нулевой. Скрыть визуально скролл
+.burger::-webkit-scrollbar {
+    width: 0;                                          
+} */
+/* Показываем полосу прокрутки (скрролл) при наведении или фокусе на панель
+.burger:hover,
+.burger:focus {
+    overflow-y: auto; 
+} */

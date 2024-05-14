@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выезжающая боковая панель навигации</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="burger">
+    <nav class="burger__header">
+        <div class="burger__header_left">
+            <div class="nav__btn hidden_desktop burger_icon-close" id="close"></div>      
+            <img class="burger__logo" src="./img/Logo.svg" alt="Лого">
+        </div>
+        <div class="burger__header_right">
+            <div class="nav__btn burger_icon-search"></div>    
+        </div>
+    </nav>  
+    <nav class="burger__menu">   
+        <ul class ="burger__menu_list"> 
+            <li class="burger__menu_item burger__menu_item--active"><a class="burger__menu_link" href="#">Ремонт техники</a></li>
+            <li class="burger__menu_item"><a class="burger__menu_link" href="#">Услуги и сервисы</a></li>
+            <li class="burger__menu_item"><a class="burger__menu_link" href="#">Корпоративным клиентам</a></li>
+            <li class="burger__menu_item"><a class="burger__menu_link" href="#">Продавцам техники</a></li>
+            <li class="burger__menu_item"><a class="burger__menu_link" href="#">Партнерам</a></li>
+            <li class="burger__menu_item"><a class="burger__menu_link" href="#">Производителям</a></li>
+            <li class="burger__menu_item"><a class="burger__menu_link" href="#">Наши сервисные центры</a></li>
+            <li class="burger__menu_item"><a class="burger__menu_link" href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    <footer class="burger__footer">
+        <div class="burger__footer-nav">
+            <div class="nav__btn phone_icon"></div>  
+            <div class="nav__btn message_icon"></div> 
+            <div class="nav__btn profile_icon"></div> 
+        </div>
+        <div class="burger__footer-contacts">
+            <a class="footer__email" href="mailto:mail@cps.com">mail@cps.com</a>
+            <a class="footer__phone-number" href="tel:+78008908900">8 800 890 8900</a>
+        </div>
+        <div class="burger__footer-languages">
+            <p class="language-item language-item--active" title="русский">RU</p> 
+            <p class="language-item" title="english">EN</p>
+            <p class="language-item" title="中国人">CH</p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
