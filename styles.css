@@ -74,8 +74,8 @@
     width: 320px;                                           /*устанавливает ширину меню равной 320 пикселей. если бы 100% то на всю ширину*/
     position: fixed;
     top: 0;                                                 /*располагает меню в верхней части экрана.*/
-    overflow-y: auto;                                       /*Добавляем вертикальный скролл, если контент превышает высоту */                       
-    box-shadow: 13px 0px 60px rgba(107, 107, 141, 0.5);   /*добавляет тень к элементу*/ 
+    overflow-y: auto;                                                            
+    box-shadow: 13px 0px 60px rgba(107, 107, 141, 0.5);     /*добавляет тень к элементу*/ 
 }
 @media screen and (min-height: 784px) {                     /*burger__footer, который имеет margin-top: auto;, начинает отодвигаться от .burger__menu*/
     .burger {
@@ -115,7 +115,7 @@
 
 .burger__menu_list{
     display: flex;                                         
-    flex-direction: column;                                 /*Направление, в котором блоки будут располагаться в виде столбца */
+    flex-direction: column;                               
 }
   
 .burger__menu_item {
@@ -153,7 +153,7 @@
     text-decoration: none; }                                /*убрано нижнее подчеркивание у ссылки*/
 
 .burger__footer {
-    width: auto;                                            /*по умолчанию*/
+    width: auto;                                            
     margin-top: auto;                                       /*Определяет внешний отступ в верхней части элемента. auto - Браузер выбирает подходящее значение для использования.*/
     margin-left: 24px;                                      /*внешний отсуп слева*/
 }
@@ -190,7 +190,7 @@
     line-height: 24px;                                      
     margin-bottom: 12px;                                   
     letter-spacing: -0.2px;                                 /*Свойство letter-spacing определяет межбуквенное расстояние в тексте.*/
-    color: #1B1C21;                                       /*цвет шрифта по макету*/
+    color: #1B1C21;                                         /*цвет шрифта по макету*/
     font-weight: 500;      
 }
 .footer__phone-number{
