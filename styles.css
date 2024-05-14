@@ -149,7 +149,7 @@
 }
 
 .burger__menu_link {
-    color: #1B1C21;                                       /*цвет текста ссылки*/
+    color: #1B1C21;                                         /*цвет текста ссылки*/
     text-decoration: none; }                                /*убрано нижнее подчеркивание у ссылки*/
 
 .burger__footer {
